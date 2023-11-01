@@ -1,10 +1,21 @@
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
+import Login from "./pages/Login";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Home from "./pages/Home";
+import Header from "./components/Header";
+import Produto from "./pages/Produto";
 
 function App() {
   return (
-    <div>
-      <h1>Olá!!</h1>
-    </div>
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Login />}></Route>
+        <Route path="/home" element={<Home />}></Route>
+        <Route path="/produto" element={<Produto />}></Route>
+      </Routes>
+    </>
   );
 }
 
