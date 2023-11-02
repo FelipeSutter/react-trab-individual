@@ -2,6 +2,10 @@ import { Link } from "react-router-dom";
 import "./style.css";
 
 function Header() {
+  const infos = JSON.parse(localStorage.getItem("infos"));
+
+  // TODO: caso não tenha localStorage desabilitar as outras opções
+
   return (
     <div>
       <nav className="nav-bar">
@@ -10,10 +14,10 @@ function Header() {
             <Link to={"/"}>Login</Link>
           </li>
           <li>
-            <Link to={`/home`}>Home</Link>
+            <Link to={infos == undefined ? `/` : `/home`}>Home</Link>
           </li>
           <li>
-            <Link to={`/produto`}>Produtos</Link>
+            <Link to={infos == undefined ? `/` : `/produto`}>Produtos</Link>
           </li>
         </ul>
       </nav>

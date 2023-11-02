@@ -4,6 +4,36 @@
 }
 
 .my-form {
-    border: solid white;
-    padding: 10px;
+    border-radius: 20px;
+    background-color: rgb(177, 179, 179);
+    width: 30vw;
+    height: 30vh;
+    padding: 40px;
+    box-shadow: 0rem 0rem 2rem 0.5rem rgba(90, 90, 90, 0.401);
+    margin: auto
+}
+
+.my-form input {
+    max-width: 90%;
+    max-height: 90%;
+    width: 100%;
+    padding: 12px 20px;
+}
+
+.my-form label {
+    padding-bottom: 12px;
+}
+
+.my-form button {
+    margin-top: 1.5rem;
+    padding: 12px 20px;
+    width: 75%;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+}
+
+.div-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

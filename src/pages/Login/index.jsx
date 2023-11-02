@@ -31,28 +31,27 @@ function Login() {
     <div className="my-container">
       <h1>Login</h1>
       <form className="my-form">
-        <label>
-          <input
-            type="text"
-            placeholder="Digite seu nome"
-            value={nome}
-            onChange={(e) => setNome(e.target.value)}
-          />
-          <br />
-        </label>
-        <label>
-          <input
-            type="password"
-            placeholder="Digite sua senha"
-            value={senha}
-            onChange={(e) => setSenha(e.target.value)}
-          />
-          <br />
-        </label>
-
-        <button type="button" onClick={entrar}>
-          Entrar
-        </button>
+        <label htmlFor="nome">Nome: </label>
+        <input
+          type="text"
+          placeholder="Digite seu nome"
+          value={nome}
+          onChange={(e) => setNome(e.target.value)}
+        />
+        <br />
+        <label htmlFor="senha">Senha: </label>
+        <input
+          type="password"
+          placeholder="Digite sua senha"
+          value={senha}
+          onChange={(e) => setSenha(e.target.value)}
+        />
+        <br />
+        <div className="div-button">
+          <button type="button" onClick={entrar}>
+            Entrar
+          </button>
+        </div>
       </form>
     </div>
   );
