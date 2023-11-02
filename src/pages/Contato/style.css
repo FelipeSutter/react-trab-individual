@@ -1,0 +1,58 @@
+.my-container {
+    background-color: rgb(0, 42, 79);
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0rem 0rem 2rem 0.5rem rgba(101, 109, 170, 0.401);
+    width: 50%;
+    margin: auto;
+    padding: 2px;
+}
+
+.github-btn {
+    background-color: rgb(0, 42, 79);
+    background-image: url("../../assets/icons8-github-96.png");
+    background-repeat: no-repeat;
+    width: 96px;
+    height: 96px;
+    margin: 10px 0px 0px 20px;
+    position: sticky;
+    border: none;
+    top: 0px;
+  }
+  
+  .instagram-btn {
+    background-color: rgb(0, 42, 79);
+    background-image: url("../../assets/icons8-instagram-96.png");
+    background-repeat: no-repeat;
+    width: 96px;
+    height: 96px;
+    margin: 10px 0px 0px 20px;
+    position: sticky;
+    border: none;
+    top: 0px;
+  }
+  
+  .linkedin-btn {
+    background-color: rgb(0, 42, 79);
+    background-image: url("../../assets/icons8-linkedin-96.png");
+    background-repeat: no-repeat;
+    width: 96px;
+    height: 96px;
+    margin: 10px 0px 0px 20px;
+    position: sticky;
+    border: none;
+    top: 0px;
+  }
+  
+  .btn {
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    padding: 4px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .btn:hover {
+    top: -4px;
+    box-shadow: 0 4px 3px #000000;
+  }
