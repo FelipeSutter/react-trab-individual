@@ -12,6 +12,8 @@
 .nav-bar ul li {
     display: inline;
     margin: 10px;
+    font-size: 2rem;
+    font-weight: bolder;
 }
 
 .nav-bar ul li a {

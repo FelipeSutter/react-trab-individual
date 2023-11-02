@@ -14,10 +14,10 @@ function Header() {
             <Link to={"/"}>Login</Link>
           </li>
           <li>
-            <Link to={infos == undefined ? `/` : `/home`}>Home</Link>
+            <Link to={`/home`}>Home</Link>
           </li>
           <li>
-            <Link to={infos == undefined ? `/` : `/produto`}>Produtos</Link>
+            <Link to={`/produto`}>Produtos</Link>
           </li>
         </ul>
       </nav>
