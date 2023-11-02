@@ -1,4 +1,24 @@
 .nav-bar {
-    margin: auto;
-    background-color: bisque;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: rgba(75, 44, 231, 0.767);
+}
+
+.nav-bar ul {
+    list-style: none;
+    margin: 0
+}
+
+.nav-bar ul li {
+    display: inline;
+    margin: 10px;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: rgb(245, 244, 244)
+}
+
+.nav-bar ul li a:hover {
+    color: rgb(148, 148, 148)
 }
