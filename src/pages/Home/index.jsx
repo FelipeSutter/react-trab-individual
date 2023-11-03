@@ -42,9 +42,19 @@ function Home() {
   const pesquisarProduto = (text) => {
     setNovoProduto(text);
     const arrayFiltrado = produtos.filter((item) =>
-      item.toLowerCase().include(text.toLowerCase())
+      item.toLowerCase().includes(text.toLowerCase())
     );
     setProdutosFiltrados(arrayFiltrado);
+  };
+
+  const comprarProduto = (item) => {
+    alert(`Parabéns, você comprou o produto ${item.title}!`);
+    excluir(item.id);
+  };
+
+  const excluir = (id) => {
+    const array = produtos.filter((item) => item.id != id);
+    setProdutos(array);
   };
 
   return (
@@ -59,7 +69,7 @@ function Home() {
         className="input-icon"
       />
       {produtosFiltrados.map((item) => (
-        <Produtos key={item.id} item={item} />
+        <Produtos key={item.id} item={item} fn={() => comprarProduto(item)} />
       ))}
     </div>
   );
