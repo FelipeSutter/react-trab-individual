@@ -1,6 +1,6 @@
 import "./style.css";
 
-function Produtos({ item }) {
+function Produtos({ item, fn }) {
   return (
     <div>
       <h2>{item.title}</h2>
@@ -11,6 +11,7 @@ function Produtos({ item }) {
         height={item.height}
         className="my-img"
       />
+      <button onClick={fn}>Comprar</button>
     </div>
   );
 }

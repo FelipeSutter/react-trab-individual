@@ -2,7 +2,7 @@ import "./style.css";
 
 function Contato() {
   return (
-    <div className="my-container">
+    <div className="my-container-contact">
       <h1>Felipe Sutter</h1>
       <br />
       <hr />
