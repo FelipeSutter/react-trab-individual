@@ -11,12 +11,13 @@ function Home() {
   const navigate = useNavigate();
   const [novoProduto, setNovoProduto] = useState();
   const [produtos, setProdutos] = useState([]);
+  const [produtosFiltrados, setProdutosFiltrados] = useState([]);
 
   const getProdutos = async () => {
     try {
       const { data } = await axios.get(url);
-      console.log(data);
       setProdutos(data);
+      setProdutosFiltrados(data);
     } catch (e) {
       console.log(e);
     }
@@ -38,6 +39,14 @@ function Home() {
     navigate(`/`);
   };
 
+  const pesquisarProduto = (text) => {
+    setNovoProduto(text);
+    const arrayFiltrado = produtos.filter((item) =>
+      item.toLowerCase().include(text.toLowerCase())
+    );
+    setProdutosFiltrados(arrayFiltrado);
+  };
+
   return (
     <div className="my-container">
       <h1>Seja bem-vindo(a), {nome}</h1>
@@ -46,10 +55,10 @@ function Home() {
         type="text"
         placeholder="Pesquisar"
         value={novoProduto}
-        onChange={(e) => setNovoProduto(e.target.value)}
+        onChange={(e) => pesquisarProduto(e.target.value)}
         className="input-icon"
       />
-      {produtos.map((item) => (
+      {produtosFiltrados.map((item) => (
         <Produtos key={item.id} item={item} />
       ))}
     </div>
