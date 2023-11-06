@@ -7,43 +7,8 @@
     text-align: center;
     padding: 0 10vw;
 }
-
-.my-form {
-    position: relative;
-    border-radius: 20px;
-    background-color: rgb(177, 179, 179);
-    max-width: 600px;
-    height: fit-content;
-    padding: 40px;
-    margin: auto;
-    box-shadow: 0rem 0rem 2rem 0.5rem rgba(90, 90, 90, 0.401);
-}
-
-.my-form input {
-    display: block;
-    width: 100%;
-    padding: 12px 20px;
-}
-
-.my-form label {
-    padding-bottom: 12px;
-}
-
-.my-form button {
-    margin-top: 1.5rem;
-    padding: 12px 20px;
-    width: 75%;
-    text-align: center;
-    background-color: rgb(0, 0, 0);
-}
-
-.div-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.login-box {
+  
+  .login-box {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -54,20 +19,19 @@
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 10px;
-    text-align: center;
   }
-
+  
   .login-box h2 {
     margin: 0 0 30px;
     padding: 0;
     color: #fff;
     text-align: center;
   }
-
+  
   .login-box .user-box {
     position: relative;
   }
-
+  
   .login-box .user-box input {
     width: 100%;
     padding: 10px 0;
@@ -79,7 +43,6 @@
     outline: none;
     background: transparent;
   }
-
   .login-box .user-box label {
     position: absolute;
     top:0;
@@ -90,13 +53,28 @@
     pointer-events: none;
     transition: .5s;
   }
-
-.login-box .user-box input:focus ~ label{
-  top: -20px;
-  left: 0;
-  color: #03e9f4;
-  font-size: 12px;
-}
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+  }
+  
+  .login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+  }
 
 .login-box form button {
     position: relative;

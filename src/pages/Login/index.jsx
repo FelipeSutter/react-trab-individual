@@ -37,6 +37,7 @@ function Login() {
           <input
             type="text"
             value={nome}
+            required=""
             onChange={(e) => setNome(e.target.value)}
           />
           <label>Nome </label>
@@ -45,6 +46,7 @@ function Login() {
           <input
             type="password"
             value={senha}
+            required=""
             onChange={(e) => setSenha(e.target.value)}
           />
           <label>Senha </label>

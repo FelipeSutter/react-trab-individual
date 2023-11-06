@@ -39,10 +39,11 @@ function Home() {
     navigate(`/`);
   };
 
-  const pesquisarProduto = (text) => {
+  const pesquisarProduto = (e) => {
+    const text = e.target.value;
     setNovoProduto(text);
     const arrayFiltrado = produtos.filter((item) =>
-      item.toLowerCase().includes(text.toLowerCase())
+      item.title.toLowerCase().startsWith(text)
     );
     setProdutosFiltrados(arrayFiltrado);
   };
@@ -65,7 +66,7 @@ function Home() {
         type="text"
         placeholder="Pesquisar"
         value={novoProduto}
-        onChange={(e) => pesquisarProduto(e.target.value)}
+        onChange={(e) => pesquisarProduto(e)}
         className="input-icon"
       />
       {produtosFiltrados.map((item) => (
