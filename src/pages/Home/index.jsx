@@ -72,6 +72,10 @@ function Home() {
       {produtosFiltrados.map((item) => (
         <Produtos key={item.id} item={item} fn={() => comprarProduto(item)} />
       ))}
+      <img
+        src="https://d15f34w2p8l1cc.cloudfront.net/hearthstone/7740c50c88d17b12c3eccbf1c57af9163929add6c63bba7fbad663f574bc6307.png"
+        alt="Imagem de uma carta chamada LEEEEEERROYYYY JENNNKINNSSSS"
+      ></img>
     </div>
   );
 }
